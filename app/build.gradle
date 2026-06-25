@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.mousetotouch'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.mousetotouch"
+        minSdk 26          // requestPointerCapture / APIs usadas exigem Android 8.0+
+        targetSdk 34
+        versionCode 1
+        versionName "0.1.0"
+    }
+
+    buildTypes {
+        debug {
+            // build de debug é suficiente para instalar manualmente (sideload) no aparelho
+            debuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+
+    // Shizuku: permite chamar APIs de sistema (ex: injectInputEvent) com
+    // privilégio de shell/root, sem precisar assinar o app como sistema.
+    implementation 'dev.rikka.shizuku:api:13.1.5'
+    implementation 'dev.rikka.shizuku:provider:13.1.5'
+}

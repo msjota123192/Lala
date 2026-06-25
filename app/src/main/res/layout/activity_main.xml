@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shizuku: verificando..."
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnShizuku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. Conceder permissão Shizuku"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. Conceder permissão de overlay"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnAccessibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Habilitar serviço de Acessibilidade"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:id="@+id/editDevicePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="/dev/input/event8"
+        android:text="/dev/input/event8"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="▶ Iniciar captura" />
+
+</LinearLayout>
