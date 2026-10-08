@@ -113,3 +113,4 @@ no mesmo espírito de apps como Panda Mouse Pro e GG Mouse Pro. Usar
 mouse/teclado em jogos balanceados pra touch pode violar os termos de
 serviço de alguns jogos ou ser considerado vantagem mecânica em modos
 competitivos — isso é uma decisão sua, não uma questão técnica.
+Build test
